@@ -1,0 +1,131 @@
+@use 'config' as c;
+
+@media (max-width: 600px) {
+  .header {
+    @include c.flex(space-between, center, row);
+    width: 90%;
+    max-width: 1400px;
+    margin-inline: auto;
+    padding: 30px 0;
+
+    &-left {
+    }
+
+    &-right {
+      & .right-container {
+        position: absolute;
+        right: 0;
+        top: 0;
+        @include c.flex(flex-start, center, column);
+        width: 80%;
+        height: 100vh;
+        padding-top: 150px;
+        background: c.$sec-mirage-blue;
+        transform: translateX(100%);
+        @include c.transition;
+
+        &.open {
+          transform: translateX(0);
+        }
+
+        &:after {
+          position: absolute;
+          content: '';
+          top: 80px;
+          width: 80%;
+          height: 1px;
+          background: c.$sec-light-san-juan-blue;
+        }
+      }
+
+      & .links {
+        @include c.flex(space-between, center, column);
+        margin-left: 0px;
+        margin-bottom: 40px;
+
+        & .link {
+          opacity: 0;
+          @include c.transition;
+
+          &.open {
+            opacity: 1;
+          }
+          &:not(:last-child) {
+            margin-right: 0px;
+            margin-bottom: 40px;
+          }
+          & a {
+            color: c.$pri-link-water-white;
+            font-size: 20px;
+
+            &:hover {
+              color: c.$pri-link-water-white;
+            }
+          }
+        }
+      }
+
+      & .header-right-btn {
+        width: 80%;
+        margin-inline: auto;
+        opacity: 0;
+
+        @include c.transition;
+
+        &.open {
+          opacity: 1;
+        }
+
+        & a {
+          position: relative;
+          display: inline-block;
+          text-align: center;
+          width: 100%;
+          @include c.pink-btn-on-light;
+
+          &:hover {
+            background: c.$pri-dark-pink;
+          }
+        }
+      }
+    }
+
+    .menu-icon {
+      display: block;
+
+      & #menu-close {
+        display: none;
+      }
+
+      &.open {
+        & #menu-open {
+          display: none;
+        }
+
+        & #menu-close {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .pattern.top-pattern {
+    width: 680px;
+    & img {
+      position: absolute;
+      width: 680px;
+      top: -400px;
+      right: -40px;
+      z-index: 3;
+    }
+  }
+}
+
+@media (max-width: 415px) {
+  .pattern.top-pattern {
+    & img {
+      top: -430px;
+      right: -140px;
+    }
+  }
+}

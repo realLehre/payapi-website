@@ -1,0 +1,87 @@
+@use 'config' as c;
+
+body {
+  overflow-x: hidden;
+}
+
+#header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+}
+
+.header {
+  @include c.flex(space-between, center, row);
+  width: 90%;
+  max-width: 1400px;
+  margin-inline: auto;
+  padding: 30px 0;
+
+  &-left {
+  }
+
+  &-right {
+    margin-left: 30px;
+    width: 80%;
+
+    & .right-container {
+      @include c.flex(space-between, center, row);
+      width: 100%;
+    }
+
+    & .links {
+      @include c.flex(space-between, center, row);
+
+      & .link {
+        position: relative;
+        z-index: 10;
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+        & a {
+          color: c.$sec-light-san-juan-blue;
+          font-size: 15px;
+          font-weight: c.$sec-font-bold;
+
+          &:hover {
+            color: c.$sec-mirage-blue;
+          }
+        }
+      }
+    }
+
+    & .header-right-btn {
+      position: relative;
+      width: auto;
+      z-index: 10;
+      & a {
+        display: inline-block;
+        @include c.pink-btn-on-light;
+      }
+    }
+  }
+
+  .menu-icon {
+    display: none;
+
+    & img {
+      position: relative;
+      cursor: pointer;
+      z-index: 10;
+    }
+  }
+}
+
+.pattern.top-pattern {
+  & img {
+    position: absolute;
+    width: 680px;
+    top: 0;
+    right: -20%;
+    z-index: 3;
+  }
+}
+
+@import 'shared-responsive';
