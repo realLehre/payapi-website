@@ -4,7 +4,6 @@
 
 #main-hero-container {
   position: relative;
-  z-index: 6;
 }
 
 .main-hero {
@@ -74,7 +73,9 @@
   }
 
   &-right {
+    position: relative;
     width: 380px;
+    z-index: 8;
     & img {
       width: 100%;
     }

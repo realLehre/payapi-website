@@ -4,7 +4,7 @@ const menuIconContainer = document.querySelector('.menu-icon');
 const menuIcons = document.querySelectorAll('.menu-btn');
 const headerBtn = document.querySelector('.header-right-btn');
 const headerPattern = document.getElementById('header-pattern');
-const mainHero = document.getElementById('main-hero-container');
+const heroImg = document.querySelector('.main-hero-right');
 
 menuIcons.forEach((menuIcon) => {
   menuIcon.addEventListener('click', () => {
@@ -23,7 +23,7 @@ menuIcons.forEach((menuIcon) => {
 
       headerPattern.classList.add('open');
 
-      mainHero.classList.add('open');
+      heroImg.classList.add('open');
     } else {
       linksContainer.classList.remove('open');
 
@@ -34,6 +34,12 @@ menuIcons.forEach((menuIcon) => {
       });
 
       headerBtn.classList.remove('open');
+
+      headerPattern.classList.remove('open');
+
+      setTimeout(() => {
+        heroImg.classList.remove('open');
+      }, 300);
     }
   });
 });

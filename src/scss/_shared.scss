@@ -27,8 +27,17 @@ body {
     width: 80%;
 
     & .right-container {
+      position: relative;
       @include c.flex(space-between, center, row);
       width: 100%;
+
+      & .pattern.top-pattern {
+        position: absolute;
+        width: 680px;
+        top: -600%;
+        right: -20%;
+        z-index: 3;
+      }
     }
 
     & .links {
@@ -71,16 +80,6 @@ body {
       cursor: pointer;
       z-index: 10;
     }
-  }
-}
-
-.pattern.top-pattern {
-  & img {
-    position: absolute;
-    width: 680px;
-    top: -200%;
-    right: -10%;
-    z-index: 3;
   }
 }
 

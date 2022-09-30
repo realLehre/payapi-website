@@ -124,7 +124,7 @@ var menuIconContainer = document.querySelector('.menu-icon');
 var menuIcons = document.querySelectorAll('.menu-btn');
 var headerBtn = document.querySelector('.header-right-btn');
 var headerPattern = document.getElementById('header-pattern');
-var mainHero = document.getElementById('main-hero-container');
+var heroImg = document.querySelector('.main-hero-right');
 menuIcons.forEach(function (menuIcon) {
   menuIcon.addEventListener('click', function () {
     if (menuIcon.dataset.id == 'open') {
@@ -137,7 +137,7 @@ menuIcons.forEach(function (menuIcon) {
         headerBtn.classList.add('open');
       }, 300);
       headerPattern.classList.add('open');
-      mainHero.classList.add('open');
+      heroImg.classList.add('open');
     } else {
       linksContainer.classList.remove('open');
       menuIconContainer.classList.remove('open');
@@ -145,6 +145,10 @@ menuIcons.forEach(function (menuIcon) {
         linkItem.classList.remove('open');
       });
       headerBtn.classList.remove('open');
+      headerPattern.classList.remove('open');
+      setTimeout(function () {
+        heroImg.classList.remove('open');
+      }, 300);
     }
   });
 });
