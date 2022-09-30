@@ -1,4 +1,4 @@
-const linksContainer = document.querySelector('.right-container');
+const linksContainer = document.querySelector('.header-right');
 const links = document.querySelectorAll('.link');
 const menuIconContainer = document.querySelector('.menu-icon');
 const menuIcons = document.querySelectorAll('.menu-btn');

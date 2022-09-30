@@ -118,7 +118,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"src/js/shared.js":[function(require,module,exports) {
-var linksContainer = document.querySelector('.right-container');
+var linksContainer = document.querySelector('.header-right');
 var links = document.querySelectorAll('.link');
 var menuIconContainer = document.querySelector('.menu-icon');
 var menuIcons = document.querySelectorAll('.menu-btn');
