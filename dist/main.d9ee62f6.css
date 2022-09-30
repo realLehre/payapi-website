@@ -321,6 +321,7 @@ body {
   }
   .main-hero-right {
     width: 380px;
+    margin-right: -50px;
   }
   .main-hero-right img {
     width: 100%;
