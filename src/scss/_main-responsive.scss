@@ -38,6 +38,53 @@
       }
     }
   }
+
+  #patners-container {
+    & .patners-pattern {
+      position: absolute;
+      left: -2%;
+      top: -110%;
+    }
+  }
+
+  .patners {
+    padding: 80px 0;
+    @include c.flex(space-between, center, column-reverse);
+
+    &-left {
+      width: 100%;
+      text-align: center;
+
+      & .heading {
+        font-size: map-get(c.$font-sizes, H2);
+      }
+
+      & .copy {
+        font-size: map-get(c.$font-sizes, body);
+        width: 80%;
+        margin-inline: auto;
+      }
+
+      & a {
+        display: inline-block;
+        @include c.btn-on-dark;
+      }
+    }
+
+    &-right {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      grid-column-gap: 30px;
+      grid-row-gap: 40px;
+      margin-left: 0px;
+      margin-bottom: 30px;
+
+      & img {
+        fill: white;
+      }
+    }
+  }
 }
 
 @media (max-width: 600px) {
@@ -184,7 +231,7 @@
       width: 100%;
       text-align: center;
       & .heading {
-        font-size: map-get(c.$font-sizes, H2);
+        font-size: map-get(c.$font-sizes, H3-big);
         margin-bottom: 50px;
       }
 
@@ -217,6 +264,51 @@
       }
     }
   }
+
+  #patners-container {
+    & .patners-pattern {
+      position: absolute;
+      left: -20%;
+      top: -90%;
+    }
+  }
+
+  .patners {
+    padding: 80px 0;
+    @include c.flex(space-between, center, column-reverse);
+
+    &-left {
+      width: 100%;
+      text-align: center;
+
+      & .heading {
+        font-size: map-get(c.$font-sizes, H3-big);
+      }
+
+      & .copy {
+        width: 100%;
+      }
+
+      & a {
+        display: inline-block;
+        @include c.btn-on-dark;
+      }
+    }
+
+    &-right {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      grid-column-gap: 30px;
+      grid-row-gap: 40px;
+      margin-left: 0px;
+      margin-bottom: 30px;
+
+      & img {
+        fill: white;
+      }
+    }
+  }
 }
 
 @media (max-width: 415px) {
@@ -224,6 +316,35 @@
     & img {
       top: -430px;
       right: -140px;
+    }
+  }
+
+  #patners-container {
+    & .patners-pattern {
+      position: absolute;
+      left: -200px;
+      top: -580px;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  #patners-container {
+    & .patners-pattern {
+      position: absolute;
+      left: -250px;
+      top: -580px;
+    }
+  }
+  .patners {
+    &-right {
+      @include c.flex(center, center, column);
+      margin-left: 0px;
+      margin-bottom: 30px;
+
+      & img {
+        fill: white;
+      }
     }
   }
 }

@@ -19,6 +19,7 @@
       color: c.$sec-san-juan-blue;
       font-size: map-get(c.$font-sizes, H1-large);
       margin-bottom: 50px;
+      line-height: 1.1;
     }
 
     & .hero-form {
@@ -76,6 +77,65 @@
     width: 380px;
     & img {
       width: 100%;
+    }
+  }
+}
+
+#patners-container {
+  position: relative;
+  width: 100%;
+  background: c.$sec-mirage-blue;
+  margin-top: 70px;
+  overflow: hidden;
+
+  & .patners-pattern {
+    position: absolute;
+    left: -20%;
+    top: -90%;
+    z-index: 3;
+  }
+}
+
+.patners {
+  position: relative;
+  width: 90%;
+  max-width: 1400px;
+  margin-inline: auto;
+  padding: 100px 0;
+  @include c.flex(space-between, center, row);
+  z-index: 4;
+
+  &-left {
+    width: 40%;
+    color: c.$pri-link-water-white;
+
+    & .heading {
+      font-size: map-get(c.$font-sizes, H2);
+    }
+
+    & .copy {
+      font-size: map-get(c.$font-sizes, body);
+      margin: 30px 0;
+      margin-top: 20px;
+    }
+
+    & a {
+      display: inline-block;
+      @include c.btn-on-dark;
+    }
+  }
+
+  &-right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 40px;
+    margin-left: 20px;
+    align-items: center;
+
+    & img {
+      fill: white;
     }
   }
 }
