@@ -123,6 +123,8 @@ var links = document.querySelectorAll('.link');
 var menuIconContainer = document.querySelector('.menu-icon');
 var menuIcons = document.querySelectorAll('.menu-btn');
 var headerBtn = document.querySelector('.header-right-btn');
+var headerPattern = document.getElementById('header-pattern');
+var mainHero = document.getElementById('main-hero-container');
 menuIcons.forEach(function (menuIcon) {
   menuIcon.addEventListener('click', function () {
     if (menuIcon.dataset.id == 'open') {
@@ -134,6 +136,8 @@ menuIcons.forEach(function (menuIcon) {
         });
         headerBtn.classList.add('open');
       }, 300);
+      headerPattern.classList.add('open');
+      mainHero.classList.add('open');
     } else {
       linksContainer.classList.remove('open');
       menuIconContainer.classList.remove('open');

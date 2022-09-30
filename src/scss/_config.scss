@@ -25,28 +25,6 @@ $sec-mirage-blue: #1b262f;
 $sec-charm-pink: #da6d97;
 $sec-light-san-juan-blue: #6c8294;
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  font-family: $sec-font-family;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-h1,
-h2,
-h3 {
-  font-family: $main-font-family;
-}
-
 @mixin flex($jus, $align, $dir) {
   display: flex;
   justify-content: $jus;

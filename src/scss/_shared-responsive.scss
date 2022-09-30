@@ -21,11 +21,13 @@
         height: 100vh;
         padding-top: 150px;
         background: c.$sec-mirage-blue;
-        transform: translateX(100%);
+        // transform: translateX(100%);
+        display: none;
         @include c.transition;
 
         &.open {
-          transform: translateX(0);
+          //   transform: translateX(0);
+          @include c.flex(flex-start, center, column);
         }
 
         &:after {
@@ -35,17 +37,22 @@
           width: 80%;
           height: 1px;
           background: c.$sec-light-san-juan-blue;
+          z-index: 10;
         }
       }
 
       & .links {
+        position: relative;
         @include c.flex(space-between, center, column);
         margin-left: 0px;
         margin-bottom: 40px;
+        z-index: 10;
 
         & .link {
+          position: relative;
           opacity: 0;
           @include c.transition;
+          z-index: 10;
 
           &.open {
             opacity: 1;

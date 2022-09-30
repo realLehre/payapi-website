@@ -3,6 +3,8 @@ const links = document.querySelectorAll('.link');
 const menuIconContainer = document.querySelector('.menu-icon');
 const menuIcons = document.querySelectorAll('.menu-btn');
 const headerBtn = document.querySelector('.header-right-btn');
+const headerPattern = document.getElementById('header-pattern');
+const mainHero = document.getElementById('main-hero-container');
 
 menuIcons.forEach((menuIcon) => {
   menuIcon.addEventListener('click', () => {
@@ -18,6 +20,10 @@ menuIcons.forEach((menuIcon) => {
 
         headerBtn.classList.add('open');
       }, 300);
+
+      headerPattern.classList.add('open');
+
+      mainHero.classList.add('open');
     } else {
       linksContainer.classList.remove('open');
 
