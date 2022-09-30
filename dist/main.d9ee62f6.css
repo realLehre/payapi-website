@@ -903,6 +903,7 @@ footer {
   .footer-left .footer-links {
     margin-left: 0px;
     margin: 30px 0;
+    text-align: center;
   }
   .footer-left .footer-links span {
     display: block;
