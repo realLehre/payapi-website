@@ -245,260 +245,106 @@ footer {
   margin-right: 20px;
 }
 
-#main-hero-container {
+#pricings-container {
   position: relative;
+  width: 100%;
+  z-index: 5;
+}
+#pricings-container .heading {
+  width: 90%;
+  max-width: 1400px;
+  margin-inline: auto;
+  font-size: 56px;
+  color: #36536b;
+  margin-bottom: 30px;
 }
 
-.main-hero {
+.pricings {
   width: 90%;
   max-width: 1400px;
   margin-inline: auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   flex-direction: row;
 }
-.main-hero-left {
-  width: 50%;
+
+.pricing {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
 }
-.main-hero-left .heading {
+.pricing:not(:last-child) {
+  margin-right: 20px;
+}
+
+.pricing-top {
+  border-bottom: 1px solid #6c8294;
+  padding-bottom: 20px;
+}
+.pricing-top .plan {
+  font-size: 32px;
+  color: #ba4270;
+}
+.pricing-top .copy {
+  color: #6c8294;
+  margin: 15px 0;
+  width: 90%;
+}
+.pricing-top .price {
+  font-size: 56px;
   color: #36536b;
-  font-size: 72px;
-  margin-bottom: 50px;
-  line-height: 1.1;
 }
-.main-hero-left .hero-form {
-  position: relative;
+
+.pricing-bottom {
+  padding-top: 20px;
+  border-bottom: 1px solid #6c8294;
+  padding-bottom: 20px;
   width: 100%;
 }
-.main-hero-left .hero-form input {
-  border: none;
-  background: #fbfcfe;
-  border-radius: 50px;
-  box-shadow: 1px 1px 6px #6c8294;
-  padding: 20px 25px;
-  width: 80%;
+.pricing-bottom ul li {
   font-family: "Public Sans", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 16px;
   color: #36536b;
 }
-.main-hero-left .hero-form input:focus {
-  outline: none;
-}
-.main-hero-left .hero-form input::placeholder {
-  font-family: "Public Sans", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-}
-.main-hero-left .hero-form button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-family: "Public Sans", sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  text-decoration: none;
-  color: #fbfcfe;
-  background: #ba4270;
-  padding: 15px 25px;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 300ms ease-in;
-  border: none;
-  height: 100%;
-  padding: 15px 30px;
-}
-.main-hero-left .hero-form button:hover {
-  background: #da6d97;
-}
-.main-hero-left .hero-form button.disabled {
-  opacity: 0.4;
-}
-.main-hero-left .questions {
-  margin-top: 20px;
+.pricing-bottom ul li.greyed {
+  color: #6c8294;
   padding-left: 30px;
 }
-.main-hero-left .questions a {
-  color: #36536b;
+.pricing-bottom ul li.greyed img {
+  display: none;
 }
-.main-hero-left .questions a span {
-  font-weight: 700;
+.pricing-bottom ul li:not(:last-child) {
+  margin-bottom: 20px;
 }
-.main-hero-right {
-  position: relative;
-  width: 380px;
-  z-index: 8;
-}
-.main-hero-right img {
-  width: 100%;
+.pricing-bottom ul li img {
+  margin-right: 10px;
 }
 
-#patners-container {
-  position: relative;
-  width: 100%;
-  background: #1b262f;
-  margin-top: 70px;
-  overflow: hidden;
-}
-#patners-container .patners-pattern {
-  position: absolute;
-  left: -20%;
-  top: -90%;
-  z-index: 3;
-}
-
-.patners {
-  position: relative;
-  width: 90%;
-  max-width: 1400px;
-  margin-inline: auto;
-  padding: 100px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  z-index: 4;
-}
-.patners-left {
-  width: 40%;
-  color: #fbfcfe;
-}
-.patners-left .heading {
-  font-size: 48px;
-}
-.patners-left .copy {
-  font-size: 15px;
-  margin: 30px 0;
+.pricing-btn {
   margin-top: 20px;
 }
-.patners-left a {
-  display: inline-block;
+.pricing-btn a {
+  display: block;
   font-family: "Public Sans", sans-serif;
   font-weight: 700;
   font-size: 15px;
   text-decoration: none;
-  color: #fbfcfe;
+  color: #36536b;
   background: transparent;
-  border: 2px solid #fbfcfe;
+  border: 2px solid #36536b;
   padding: 15px 25px;
   border-radius: 50px;
   cursor: pointer;
   transition: all 300ms ease-in;
 }
-.patners-left a:hover {
-  background: #fbfcfe;
-  color: #36536b;
+.pricing-btn a:hover {
+  background: #36536b;
+  color: #fbfcfe;
 }
-.patners-left a.disabled {
+.pricing-btn a.disabled {
   opacity: 0.5;
-}
-.patners-right {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
-  grid-column-gap: 30px;
-  grid-row-gap: 40px;
-  margin-left: 20px;
-  align-items: center;
-}
-.patners-right img {
-  fill: white;
-}
-
-#cores-container {
-  position: relative;
-  margin-top: 70px;
-  padding-bottom: 50px;
-}
-#cores-container .core-pattern {
-  position: absolute;
-  right: -20%;
-  top: 38%;
-  width: 600px;
-  z-index: 2;
-}
-#cores-container .core-pattern img {
-  width: 100%;
-}
-
-.cores {
-  position: relative;
-  width: 90%;
-  max-width: 1400px;
-  margin-inline: auto;
-  z-index: 3;
-}
-.cores .core {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  width: 100%;
-}
-.cores .core2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row-reverse;
-}
-.cores .core-img {
-  width: 50%;
-}
-.cores .core-img img {
-  width: 100%;
-}
-.cores .core-content {
-  width: 50%;
-}
-.cores .core-content .heading {
-  font-size: 48px;
-  color: #36536b;
-  margin-bottom: 15px;
-}
-.cores .core-content .copy {
-  color: #6c8294;
-  width: 80%;
-}
-
-#values-container {
-  margin-top: 20px;
-}
-
-.values {
-  width: 90%;
-  max-width: 1400px;
-  margin-inline: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-}
-
-.value {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-}
-.value:not(:last-child) {
-  margin-right: 25px;
-}
-.value-img {
-  width: 80px;
-}
-.value-img img {
-  width: 100%;
-}
-.value .heading {
-  font-size: 18px;
-  font-weight: 700;
-  color: #36536b;
-  margin: 20px 0 10px;
-}
-.value .copy {
-  color: #6c8294;
 }
 
 @media (max-width: 768px) {
@@ -507,127 +353,61 @@ footer {
     top: -1300%;
     right: -20%;
   }
-  .main-hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column-reverse;
-  }
-  .main-hero-left {
-    width: 100%;
+  #pricings-container .heading {
+    width: auto;
     text-align: center;
-  }
-  .main-hero-left .heading {
-    font-size: 48px;
-    margin-bottom: 50px;
-  }
-  .main-hero-left .hero-form {
-    width: 80%;
-    margin-inline: auto;
-  }
-  .main-hero-left .questions {
-    padding-left: 0px;
-  }
-  .main-hero-right {
-    width: 380px;
-    margin-right: -50px;
-  }
-  .main-hero-right img {
-    width: 100%;
-  }
-  #patners-container .patners-pattern {
-    position: absolute;
-    left: -2%;
-    top: -110%;
-  }
-  .patners {
-    padding: 80px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column-reverse;
-  }
-  .patners-left {
-    width: 100%;
-    text-align: center;
-  }
-  .patners-left .heading {
     font-size: 48px;
   }
-  .patners-left .copy {
-    font-size: 15px;
-    width: 80%;
-    margin-inline: auto;
+  .pricing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
-  .patners-left a {
-    display: inline-block;
+  .pricing:not(:last-child) {
+    margin-right: 20px;
+  }
+  .pricing-top {
+    text-align: center;
+  }
+  .pricing-top .plan {
+    font-size: 24px;
+  }
+  .pricing-top .copy {
+    width: 100%;
+  }
+  .pricing-top .price {
+    font-size: 48px;
+  }
+  .pricing-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .pricing-bottom ul li {
     font-family: "Public Sans", sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    text-decoration: none;
-    color: #fbfcfe;
-    background: transparent;
-    border: 2px solid #fbfcfe;
-    padding: 15px 25px;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 300ms ease-in;
-  }
-  .patners-left a:hover {
-    background: #fbfcfe;
+    font-size: 16px;
     color: #36536b;
   }
-  .patners-left a.disabled {
-    opacity: 0.5;
+  .pricing-bottom ul li.greyed {
+    color: #6c8294;
+    padding-left: 30px;
   }
-  .patners-right {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    grid-column-gap: 30px;
-    grid-row-gap: 40px;
-    margin-left: 0px;
-    margin-bottom: 30px;
-  }
-  .patners-right img {
-    fill: white;
-  }
-  #cores-container .core-pattern {
+  .pricing-bottom ul li.greyed img {
     display: none;
   }
-  .cores .core {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
+  .pricing-bottom ul li:not(:last-child) {
+    margin-bottom: 20px;
   }
-  .cores .core2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 50px;
+  .pricing-bottom ul li img {
+    margin-right: 10px;
   }
-  .cores .core-img {
-    width: 100%;
-    margin-right: -50px;
+  .pricing-btn {
+    margin-top: 20px;
   }
-  .cores .core-content {
-    width: 100%;
-    text-align: center;
-    margin-inline: auto;
-    margin-top: -60px;
-  }
-  .cores .core-content .heading {
-    font-size: 48px;
-    color: #36536b;
-    margin-bottom: 10px;
-  }
-  .cores .core-content .copy {
-    color: #6c8294;
-    width: 80%;
-    margin-inline: auto;
+  .pricing-btn a {
+    white-space: nowrap;
   }
   .cta {
     display: flex;
@@ -765,122 +545,70 @@ footer {
   .header .menu-icon.open #menu-close {
     display: block;
   }
-  #main-hero-container.open {
-    z-index: 2;
-  }
-  .main-hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column-reverse;
-  }
-  .main-hero-left {
-    width: 100%;
-    text-align: center;
-  }
-  .main-hero-left .heading {
+  #pricings-container .heading {
     font-size: 32px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
-  .main-hero-left .hero-form {
-    width: 100%;
-    margin-inline: auto;
-  }
-  .main-hero-left .hero-form input {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .main-hero-left .hero-form button {
-    position: relative;
-    display: block;
-    width: 100%;
-    padding: 20px 30px;
-  }
-  .main-hero-left .questions {
-    padding-left: 0px;
-  }
-  .main-hero-right {
-    width: 380px;
-  }
-  .main-hero-right.open {
-    z-index: 5;
-  }
-  .main-hero-right img {
-    width: 100%;
-  }
-  #patners-container .patners-pattern {
-    position: absolute;
-    left: -20%;
-    top: -90%;
-  }
-  .patners {
-    padding: 80px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column-reverse;
-  }
-  .patners-left {
-    width: 100%;
-    text-align: center;
-  }
-  .patners-left .heading {
-    font-size: 32px;
-  }
-  .patners-left .copy {
-    width: 100%;
-  }
-  .patners-left a {
-    display: inline-block;
-    font-family: "Public Sans", sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    text-decoration: none;
-    color: #fbfcfe;
-    background: transparent;
-    border: 2px solid #fbfcfe;
-    padding: 15px 25px;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 300ms ease-in;
-  }
-  .patners-left a:hover {
-    background: #fbfcfe;
-    color: #36536b;
-  }
-  .patners-left a.disabled {
-    opacity: 0.5;
-  }
-  .patners-right {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    grid-column-gap: 30px;
-    grid-row-gap: 40px;
-    margin-left: 0px;
-    margin-bottom: 30px;
-  }
-  .patners-right img {
-    fill: white;
-  }
-  .values {
+  .pricings {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
-  .value:not(:last-child) {
+  .pricing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .pricing:not(:last-child) {
     margin-right: 0px;
     margin-bottom: 50px;
   }
-  .value-img {
-    width: 100px;
+  .pricing-top {
+    text-align: center;
+    width: 100%;
   }
-  .value .heading {
-    margin: 20px 0 10px;
+  .pricing-top .plan {
+    font-size: 24px;
+    margin-bottom: 90px;
   }
-  .value .copy {
+  .pricing-top .copy {
+    display: none;
+  }
+  .pricing-top .price {
+    font-size: 48px;
+  }
+  .pricing-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .pricing-bottom ul li {
+    font-family: "Public Sans", sans-serif;
+    font-size: 16px;
+    color: #36536b;
+  }
+  .pricing-bottom ul li.greyed {
     color: #6c8294;
+    padding-left: 30px;
+  }
+  .pricing-bottom ul li.greyed img {
+    display: none;
+  }
+  .pricing-bottom ul li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .pricing-bottom ul li img {
+    margin-right: 10px;
+  }
+  .pricing-btn {
+    margin-top: 20px;
+  }
+  .pricing-btn a {
+    white-space: nowrap;
   }
   .footer {
     display: flex;
@@ -922,41 +650,6 @@ footer {
   .header-right .right-container .pattern.top-pattern.open {
     transform: translateX(60%);
   }
-  #patners-container .patners-pattern {
-    position: absolute;
-    left: -200px;
-    top: -580px;
-  }
-  .cores .core {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-  }
-  .cores .core2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 50px;
-  }
-  .cores .core-img {
-    width: 100%;
-    margin-right: -35px;
-  }
-  .cores .core-content {
-    width: 100%;
-    text-align: center;
-    margin-inline: auto;
-    margin-top: -30px;
-  }
-  .cores .core-content .heading {
-    font-size: 36px;
-  }
-  .cores .core-content .copy {
-    width: 100%;
-  }
   .cta {
     display: flex;
     justify-content: center;
@@ -981,26 +674,5 @@ footer {
     padding: 20px 30px;
   }
 }
-@media (max-width: 360px) {
-  #patners-container .patners-pattern {
-    position: absolute;
-    left: -250px;
-    top: -580px;
-  }
-  .patners-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 0px;
-    margin-bottom: 30px;
-  }
-  .patners-right img {
-    fill: white;
-  }
-  .value-img {
-    width: 90px;
-  }
-}
 
-/*# sourceMappingURL=/main.d9ee62f6.css.map */
+/*# sourceMappingURL=/pricing.5584f59e.css.map */

@@ -1,0 +1,95 @@
+@use 'config' as c;
+@import 'reset';
+@import 'shared';
+
+#pricings-container {
+  position: relative;
+  width: 100%;
+  z-index: 5;
+
+  & .heading {
+    width: 90%;
+    max-width: 1400px;
+    margin-inline: auto;
+    font-size: map-get(c.$font-sizes, H1-small);
+    color: c.$sec-san-juan-blue;
+    margin-bottom: 30px;
+  }
+}
+
+.pricings {
+  width: 90%;
+  max-width: 1400px;
+  margin-inline: auto;
+  @include c.flex(space-between, flex-end, row);
+}
+
+.pricing {
+  @include c.flex(flex-start, flex-start, column);
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.pricing-top {
+  border-bottom: 1px solid c.$sec-light-san-juan-blue;
+  padding-bottom: 20px;
+  & .plan {
+    font-size: map-get(c.$font-sizes, H3-big);
+    color: c.$pri-dark-pink;
+  }
+
+  & .copy {
+    color: c.$sec-light-san-juan-blue;
+    margin: 15px 0;
+    width: 90%;
+  }
+
+  & .price {
+    font-size: map-get(c.$font-sizes, H1-small);
+    color: c.$sec-san-juan-blue;
+  }
+}
+
+.pricing-bottom {
+  padding-top: 20px;
+  border-bottom: 1px solid c.$sec-light-san-juan-blue;
+  padding-bottom: 20px;
+  width: 100%;
+
+  & ul {
+    & li {
+      font-family: c.$sec-font-family;
+      font-size: 16px;
+      color: c.$sec-san-juan-blue;
+
+      &.greyed {
+        color: c.$sec-light-san-juan-blue;
+        padding-left: 30px;
+
+        & img {
+          display: none;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      & img {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.pricing-btn {
+  margin-top: 20px;
+  & a {
+    display: block;
+    @include c.btn-on-light;
+  }
+}
+
+@import 'pricing-responsive';

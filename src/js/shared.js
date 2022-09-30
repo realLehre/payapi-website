@@ -22,8 +22,9 @@ menuIcons.forEach((menuIcon) => {
       }, 300);
 
       headerPattern.classList.add('open');
-
-      heroImg.classList.add('open');
+      try {
+        heroImg.classList.add('open');
+      } catch {}
     } else {
       linksContainer.classList.remove('open');
 
@@ -37,9 +38,11 @@ menuIcons.forEach((menuIcon) => {
 
       headerPattern.classList.remove('open');
 
-      setTimeout(() => {
-        heroImg.classList.remove('open');
-      }, 300);
+      try {
+        setTimeout(() => {
+          heroImg.classList.remove('open');
+        }, 300);
+      } catch {}
     }
   });
 });
