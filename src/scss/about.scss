@@ -1,0 +1,52 @@
+@use 'config' as c;
+@import 'reset';
+@import 'shared';
+
+#about-speech-container {
+  position: relative;
+  width: 100%;
+  z-index: 5;
+}
+
+.about-speech {
+  width: 80%;
+  max-width: 1400px;
+  margin-inline: auto;
+
+  & .heading {
+    font-size: map-get(c.$font-sizes, H1-small);
+    color: c.$sec-san-juan-blue;
+    font-weight: 600;
+    width: 70%;
+    margin-bottom: 50px;
+  }
+}
+
+.about-speech-copies {
+  width: 100%;
+
+  & .copy {
+    @include c.flex(space-between, flex-start, row);
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+
+    &-heading {
+      font-size: map-get(c.$font-sizes, H3-big);
+      color: c.$sec-san-juan-blue;
+      font-weight: bolder;
+      margin-right: 30px;
+      //   white-space: nowrap;
+      width: 30%;
+    }
+
+    &-details {
+      width: 70%;
+      color: c.$sec-light-san-juan-blue;
+    }
+  }
+}
+
+@import 'about-responsive';

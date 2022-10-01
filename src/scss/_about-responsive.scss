@@ -11,6 +11,16 @@
     }
   }
 
+  .about-speech {
+    width: 90%;
+
+    & .heading {
+      text-align: center;
+      font-size: map-get(c.$font-sizes, H2);
+      width: 100%;
+    }
+  }
+
   .cta {
     @include c.flex(center, center, column);
 
@@ -140,6 +150,36 @@
         & #menu-close {
           display: block;
         }
+      }
+    }
+  }
+
+  .about-speech {
+    width: 90%;
+
+    & .heading {
+      text-align: center;
+      font-size: map-get(c.$font-sizes, H3-big);
+      width: 100%;
+    }
+  }
+
+  .about-speech-copies {
+    width: 100%;
+
+    & .copy {
+      @include c.flex(center, center, column);
+      text-align: center;
+
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+
+      &-heading {
+        font-size: map-get(c.$font-sizes, H4);
+        margin-right: 0px;
+        margin-bottom: 10px;
+        width: 100%;
       }
     }
   }

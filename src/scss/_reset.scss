@@ -26,4 +26,5 @@ h3 {
 p {
   font-family: c.$sec-font-family;
   font-size: map-get(c.$font-sizes, body);
+  line-height: 25px;
 }

@@ -23,7 +23,9 @@ menuIcons.forEach((menuIcon) => {
 
       headerPattern.classList.add('open');
       try {
-        heroImg.classList.add('open');
+        if (heroImg) {
+          heroImg.classList.add('open');
+        }
       } catch {}
     } else {
       linksContainer.classList.remove('open');
@@ -39,9 +41,11 @@ menuIcons.forEach((menuIcon) => {
       headerPattern.classList.remove('open');
 
       try {
-        setTimeout(() => {
-          heroImg.classList.remove('open');
-        }, 300);
+        if (heroImg) {
+          setTimeout(() => {
+            heroImg.classList.remove('open');
+          }, 300);
+        }
       } catch {}
     }
   });
