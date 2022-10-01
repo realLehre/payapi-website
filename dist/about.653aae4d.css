@@ -339,6 +339,14 @@ footer {
   color: #ba4270;
 }
 
+#about-speech-copies-second {
+  margin-top: 70px;
+}
+#about-speech-copies-second .about-speech-copies {
+  width: 80%;
+  margin-inline: auto;
+}
+
 @media (max-width: 768px) {
   .header-right .right-container .pattern.top-pattern {
     width: 900px;

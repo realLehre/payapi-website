@@ -100,4 +100,13 @@
   }
 }
 
+#about-speech-copies-second {
+  margin-top: 70px;
+
+  & .about-speech-copies {
+    width: 80%;
+    margin-inline: auto;
+  }
+}
+
 @import 'about-responsive';
