@@ -200,6 +200,35 @@
     }
   }
 
+  .about-numbers {
+    @include c.flex(center, center, column);
+    border-top: 1px solid c.$sec-light-san-juan-blue;
+    border-bottom: 1px solid c.$sec-light-san-juan-blue;
+    text-align: center;
+
+    & .about-number {
+      border-top: 0;
+      border-bottom: 0;
+      flex: 1;
+      padding: 20px 0;
+
+      &:not(:last-child) {
+        margin-right: 0px;
+      }
+
+      & .number-type {
+        font-size: 16px;
+        color: c.$sec-light-san-juan-blue;
+        margin-bottom: 0px;
+      }
+
+      & .number {
+        font-size: map-get(c.$font-sizes, H1-small);
+        color: c.$pri-dark-pink;
+      }
+    }
+  }
+
   .footer {
     @include c.flex(center, center, column);
   }
