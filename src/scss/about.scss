@@ -5,20 +5,24 @@
 #about-speech-container {
   position: relative;
   width: 100%;
-  z-index: 5;
+  z-index: 7;
 }
 
 .about-speech {
+  position: relative;
   width: 80%;
   max-width: 1400px;
   margin-inline: auto;
+  z-index: 5;
 
   & .heading {
+    position: relative;
     font-size: map-get(c.$font-sizes, H1-small);
     color: c.$sec-san-juan-blue;
     font-weight: 600;
     width: 70%;
     margin-bottom: 50px;
+    z-index: 5;
   }
 }
 
@@ -46,6 +50,20 @@
       width: 70%;
       color: c.$sec-light-san-juan-blue;
     }
+  }
+}
+
+#about-img-container {
+  width: 100%;
+  height: 500px;
+  margin-top: 70px;
+
+  & .about-img {
+    background: url('../../assets/about/desktop/image-team-members.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
   }
 }
 

@@ -249,20 +249,24 @@ footer {
 #about-speech-container {
   position: relative;
   width: 100%;
-  z-index: 5;
+  z-index: 7;
 }
 
 .about-speech {
+  position: relative;
   width: 80%;
   max-width: 1400px;
   margin-inline: auto;
+  z-index: 5;
 }
 .about-speech .heading {
+  position: relative;
   font-size: 56px;
   color: #36536b;
   font-weight: 600;
   width: 70%;
   margin-bottom: 50px;
+  z-index: 5;
 }
 
 .about-speech-copies {
@@ -290,6 +294,19 @@ footer {
   color: #6c8294;
 }
 
+#about-img-container {
+  width: 100%;
+  height: 500px;
+  margin-top: 70px;
+}
+#about-img-container .about-img {
+  background: url("/image-team-members.08fea15d.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
 @media (max-width: 768px) {
   .header-right .right-container .pattern.top-pattern {
     width: 900px;
@@ -303,6 +320,16 @@ footer {
     text-align: center;
     font-size: 48px;
     width: 100%;
+  }
+  #about-img-container {
+    width: 100%;
+    height: 267px;
+    margin-top: 70px;
+  }
+  #about-img-container .about-img {
+    background: url("/image-team-members.92659b4c.jpg");
+    background-size: cover;
+    background-position: center;
   }
   .cta {
     display: flex;
@@ -467,6 +494,9 @@ footer {
     margin-bottom: 10px;
     width: 100%;
   }
+  .about-speech-copies .copy-details {
+    width: 100%;
+  }
   .footer {
     display: flex;
     justify-content: center;
@@ -506,6 +536,16 @@ footer {
   }
   .header-right .right-container .pattern.top-pattern.open {
     transform: translateX(60%);
+  }
+  #about-img-container {
+    width: 100%;
+    height: 300px;
+    margin-top: 70px;
+  }
+  #about-img-container .about-img {
+    background: url("/image-team-members.452b78f5.jpg");
+    background-size: cover;
+    background-position: center;
   }
   .cta {
     display: flex;
