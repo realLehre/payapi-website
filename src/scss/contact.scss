@@ -1,0 +1,29 @@
+@use 'config' as c;
+@import 'reset';
+@import 'shared';
+
+#contact-container {
+  position: relative;
+  width: 100%;
+  z-index: 7;
+}
+
+.contact {
+  position: relative;
+  width: 90%;
+  max-width: 1400px;
+  margin-inline: auto;
+  z-index: 5;
+
+  & .heading {
+    position: relative;
+    font-size: map-get(c.$font-sizes, H1-small);
+    color: c.$sec-san-juan-blue;
+    font-weight: 600;
+    width: 70%;
+    margin-bottom: 50px;
+    z-index: 5;
+  }
+}
+
+@import 'contact-responsive';
