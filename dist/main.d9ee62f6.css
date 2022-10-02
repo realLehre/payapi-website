@@ -708,7 +708,7 @@ footer {
     right: 90%;
   }
   .header-right .pattern.top-pattern.open {
-    transform: translateX(70%);
+    transform: translateX(68%);
   }
   .header-right .links {
     position: relative;
@@ -938,11 +938,11 @@ footer {
 @media (max-width: 450px) {
   .header-right .pattern.top-pattern {
     width: 500px;
-    top: -10%;
-    right: 93%;
+    top: -20%;
+    right: 87%;
   }
   .header-right .pattern.top-pattern.open {
-    transform: translateX(70%);
+    transform: translateX(65%);
   }
   #patners-container .patners-pattern {
     position: absolute;
@@ -1003,19 +1003,35 @@ footer {
     padding: 20px 30px;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 394px) {
+  .header-right .pattern.top-pattern {
+    width: 500px;
+    top: -26%;
+    right: 84%;
+  }
+  .header-right .pattern.top-pattern.open {
+    transform: translateX(63%);
+  }
+}
+@media (max-width: 375px) {
+  .header-right .pattern.top-pattern {
+    width: 500px;
+    top: -26%;
+    right: 80%;
+  }
+  .header-right .pattern.top-pattern.open {
+    transform: translateX(53%);
+  }
   #patners-container .patners-pattern {
     position: absolute;
     left: -250px;
     top: -580px;
   }
-  .header-right .pattern.top-pattern {
-    width: 500px;
-    top: -10%;
-    right: 70%;
-  }
-  .header-right .pattern.top-pattern.open {
-    transform: translateX(53%);
+  .patners-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   .value-img {
     width: 90px;
