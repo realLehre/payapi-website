@@ -152,7 +152,10 @@
     right: -20%;
     top: 38%;
     width: 600px;
+    height: 600px;
     z-index: 2;
+    background-image: url('../../assets/shared/desktop/bg-pattern-circle.svg');
+    background-size: cover;
 
     & img {
       width: 100%;

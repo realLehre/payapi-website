@@ -433,7 +433,10 @@ footer {
   right: -20%;
   top: 38%;
   width: 600px;
+  height: 600px;
   z-index: 2;
+  background-image: url("/bg-pattern-circle.b529942c.svg");
+  background-size: cover;
 }
 #cores-container .core-pattern img {
   width: 100%;
