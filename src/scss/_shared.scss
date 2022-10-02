@@ -1,5 +1,9 @@
 @use 'config' as c;
 
+html {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
 body {
   overflow-x: hidden;
   max-width: 100vw;
