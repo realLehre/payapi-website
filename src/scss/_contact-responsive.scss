@@ -308,12 +308,6 @@
     }
   }
 
-  .contact-patners-container {
-    & .contact-patners {
-      @include c.flex(center, center, column);
-    }
-  }
-
   .cta {
     @include c.flex(center, center, column);
 
@@ -341,4 +335,9 @@
 }
 
 @media (max-width: 360px) {
+  .contact-patners-container {
+    & .contact-patners {
+      @include c.flex(center, center, column);
+    }
+  }
 }

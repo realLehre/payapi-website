@@ -721,12 +721,6 @@ footer {
   .header-right .right-container .pattern.top-pattern.open {
     transform: translateX(60%);
   }
-  .contact-patners-container .contact-patners {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
   .cta {
     display: flex;
     justify-content: center;
@@ -749,6 +743,14 @@ footer {
     display: block;
     width: 100%;
     padding: 20px 30px;
+  }
+}
+@media (max-width: 360px) {
+  .contact-patners-container .contact-patners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
 
