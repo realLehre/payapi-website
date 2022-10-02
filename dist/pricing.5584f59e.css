@@ -55,10 +55,18 @@ body {
   padding: 30px 0;
 }
 .header-left {
+  position: relative;
   width: 130px;
+  z-index: 4;
+}
+.header-left a {
+  position: relative;
+  z-index: 4;
 }
 .header-left img {
+  position: relative;
   width: 100%;
+  z-index: 4;
 }
 .header-right {
   position: relative;
@@ -334,7 +342,7 @@ footer {
   text-decoration: none;
   color: #36536b;
   background: transparent;
-  border: 2px solid #36536b;
+  border: 1.5px solid #36536b;
   padding: 15px 25px;
   border-radius: 50px;
   cursor: pointer;

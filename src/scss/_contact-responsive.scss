@@ -1,3 +1,72 @@
+@media (max-width: 850px) {
+  .contact {
+    position: relative;
+    width: 70%;
+    max-width: 1400px;
+    margin-inline: auto;
+    z-index: 5;
+
+    & .heading {
+      position: relative;
+      font-size: map-get(c.$font-sizes, H1-small);
+      color: c.$sec-san-juan-blue;
+      font-weight: 600;
+      width: 100%;
+      margin-bottom: 50px;
+      z-index: 5;
+      text-align: center;
+    }
+  }
+
+  .contact-main {
+    @include c.flex(center, center, column);
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .contact-form-container {
+    position: relative;
+    width: 100%;
+    z-index: 3;
+    margin-right: 0px;
+    margin-bottom: 70px;
+
+    & form {
+      & .form-sent-message {
+        //   color: c.$pri_white;
+        //   font-weight: c.$font-weight_bold;
+        font-size: 30px;
+        align-self: center;
+        margin-top: 30px;
+        display: none;
+
+        &.show {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .contact-patners-container {
+    & h1 {
+      color: c.$sec-light-san-juan-blue;
+      font-size: map-get(c.$font-sizes, H4);
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    & .contact-patners {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      grid-column-gap: 10px;
+      grid-row-gap: 40px;
+      margin-left: 20px;
+      align-items: center;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .header {
     &-right {
@@ -8,6 +77,19 @@
           right: -20%;
         }
       }
+    }
+  }
+
+  .contact {
+    position: relative;
+    width: 75%;
+    max-width: 1400px;
+    margin-inline: auto;
+    z-index: 5;
+
+    & .heading {
+      font-size: map-get(c.$font-sizes, H2);
+      text-align: center;
     }
   }
 
@@ -144,6 +226,39 @@
     }
   }
 
+  .contact {
+    width: 90%;
+
+    & .heading {
+      font-size: map-get(c.$font-sizes, H3-big);
+    }
+  }
+
+  .contact-main {
+    @include c.flex(center, center, column);
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .contact-patners-container {
+    & h1 {
+      color: c.$sec-light-san-juan-blue;
+      font-size: map-get(c.$font-sizes, H4);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    & .contact-patners {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      grid-column-gap: 30px;
+      grid-row-gap: 40px;
+      margin-left: 0px;
+      margin-bottom: 30px;
+    }
+  }
+
   .footer {
     @include c.flex(center, center, column);
   }
@@ -190,6 +305,12 @@
           }
         }
       }
+    }
+  }
+
+  .contact-patners-container {
+    & .contact-patners {
+      @include c.flex(center, center, column);
     }
   }
 

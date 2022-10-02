@@ -55,10 +55,18 @@ body {
   padding: 30px 0;
 }
 .header-left {
+  position: relative;
   width: 130px;
+  z-index: 4;
+}
+.header-left a {
+  position: relative;
+  z-index: 4;
 }
 .header-left img {
+  position: relative;
   width: 100%;
+  z-index: 4;
 }
 .header-right {
   position: relative;
