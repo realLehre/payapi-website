@@ -3,6 +3,8 @@
 body {
   overflow-x: hidden;
   max-width: 100vw;
+  min-height: 100vh;
+  @include c.flex(flex-start, center, column);
 }
 
 #header-container {
@@ -94,6 +96,8 @@ body {
 
 #cta-container {
   margin-top: 70px;
+  width: 100%;
+  flex-grow: 1;
 }
 
 .cta {
@@ -150,6 +154,7 @@ footer {
   margin-top: 70px;
   background: rgb(0, 62, 0);
   padding: 20px 0;
+  width: 100%;
 }
 
 .footer {
