@@ -148,11 +148,12 @@
 
       & .pattern.top-pattern {
         width: 680px;
-        top: -20%;
-        right: 90%;
+        top: -30%;
+        right: 0%;
+        transition: all -200ms ease-out;
 
         &.open {
-          transform: translateX(70%);
+          transform: translateX(68%);
         }
       }
 
@@ -306,15 +307,13 @@
 @media (max-width: 450px) {
   .header {
     &-right {
-      & .right-container {
-        & .pattern.top-pattern {
-          width: 500px;
-          top: -15%;
-          right: 80%;
+      & .pattern.top-pattern {
+        width: 680px;
+        top: -62%;
+        right: 0%;
 
-          &.open {
-            transform: translateX(60%);
-          }
+        &.open {
+          transform: translateX(48%);
         }
       }
     }
@@ -346,7 +345,53 @@
   }
 }
 
+@media (max-width: 394px) {
+  .header {
+    &-right {
+      & .pattern.top-pattern {
+        width: 680px;
+        top: -68%;
+        right: -10%;
+
+        &.open {
+          transform: translateX(45%);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .header {
+    &-right {
+      & .pattern.top-pattern {
+        width: 680px;
+        top: -73%;
+        right: -10%;
+
+        &.open {
+          transform: translateX(45%);
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 360px) {
+  .header {
+    &-right {
+      & .pattern.top-pattern {
+        width: 680px;
+        top: -80%;
+        right: -15%;
+
+        &.open {
+          transform: translateX(45%);
+        }
+      }
+    }
+  }
+
   .contact-patners-container {
     & .contact-patners {
       @include c.flex(center, center, column);

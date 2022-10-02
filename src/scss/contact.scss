@@ -2,6 +2,18 @@
 @import 'reset';
 @import 'shared';
 
+.header {
+  &-right {
+    & .pattern.top-pattern {
+      position: absolute;
+      width: 680px;
+      top: -1100%;
+      right: -30%;
+      z-index: 3;
+    }
+  }
+}
+
 #contact-container {
   position: relative;
   width: 100%;
