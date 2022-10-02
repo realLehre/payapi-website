@@ -113,6 +113,12 @@
     @include c.flex(space-between, center, row);
     overflow-x: hidden;
 
+    &-left {
+      &.open {
+        z-index: 5;
+      }
+    }
+
     &-right {
       position: absolute;
       right: 0;
@@ -223,6 +229,12 @@
           display: block;
         }
       }
+    }
+  }
+
+  #contact-container {
+    &.open {
+      z-index: 5;
     }
   }
 

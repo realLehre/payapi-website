@@ -67,16 +67,10 @@ body {
 .header-left {
   position: relative;
   width: 130px;
-  z-index: 4;
-}
-.header-left a {
-  position: relative;
-  z-index: 4;
+  z-index: 10;
 }
 .header-left img {
-  position: relative;
   width: 100%;
-  z-index: 4;
 }
 .header-right {
   position: relative;
@@ -415,6 +409,9 @@ footer {
     flex-direction: row;
     overflow-x: hidden;
   }
+  .header-left.open {
+    z-index: 5;
+  }
   .header-right {
     position: absolute;
     right: 0;
@@ -527,6 +524,9 @@ footer {
   }
   .header .menu-icon.open #menu-close {
     display: block;
+  }
+  #about-speech-container.open {
+    z-index: 5;
   }
   .about-speech {
     width: 90%;

@@ -53,6 +53,12 @@
     @include c.flex(space-between, center, row);
     overflow-x: hidden;
 
+    &-left {
+      &.open {
+        z-index: 5;
+      }
+    }
+
     &-right {
       position: absolute;
       right: 0;
@@ -163,6 +169,12 @@
           display: block;
         }
       }
+    }
+  }
+
+  #about-speech-container {
+    &.open {
+      z-index: 5;
     }
   }
 

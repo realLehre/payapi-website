@@ -67,16 +67,10 @@ body {
 .header-left {
   position: relative;
   width: 130px;
-  z-index: 4;
-}
-.header-left a {
-  position: relative;
-  z-index: 4;
+  z-index: 10;
 }
 .header-left img {
-  position: relative;
   width: 100%;
-  z-index: 4;
 }
 .header-right {
   position: relative;
@@ -270,7 +264,7 @@ footer {
 #pricings-container {
   position: relative;
   width: 100%;
-  z-index: 5;
+  z-index: 7;
 }
 #pricings-container .heading {
   width: 90%;
@@ -454,6 +448,9 @@ footer {
     flex-direction: row;
     overflow-x: hidden;
   }
+  .header-left.open {
+    z-index: 5;
+  }
   .header-right {
     position: absolute;
     right: 0;
@@ -566,6 +563,9 @@ footer {
   }
   .header .menu-icon.open #menu-close {
     display: block;
+  }
+  #pricings-container.open {
+    z-index: 5;
   }
   #pricings-container .heading {
     font-size: 32px;

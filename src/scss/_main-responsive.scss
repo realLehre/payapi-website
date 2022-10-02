@@ -149,6 +149,12 @@
     @include c.flex(space-between, center, row);
     overflow-x: hidden;
 
+    &-left {
+      &.open {
+        z-index: 5;
+      }
+    }
+
     &-right {
       position: absolute;
       right: 0;
@@ -416,15 +422,13 @@
 @media (max-width: 450px) {
   .header {
     &-right {
-      & .right-container {
-        & .pattern.top-pattern {
-          width: 500px;
-          top: -15%;
-          right: 80%;
+      & .pattern.top-pattern {
+        width: 500px;
+        top: -10%;
+        right: 93%;
 
-          &.open {
-            transform: translateX(60%);
-          }
+        &.open {
+          transform: translateX(70%);
         }
       }
     }
@@ -503,14 +507,16 @@
       top: -580px;
     }
   }
-  .patners {
+  .header {
     &-right {
-      @include c.flex(center, center, column);
-      margin-left: 0px;
-      margin-bottom: 30px;
+      & .pattern.top-pattern {
+        width: 500px;
+        top: -10%;
+        right: 70%;
 
-      & img {
-        fill: white;
+        &.open {
+          transform: translateX(53%);
+        }
       }
     }
   }

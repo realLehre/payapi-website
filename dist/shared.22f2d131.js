@@ -123,8 +123,12 @@ var links = document.querySelectorAll('.link');
 var menuIconContainer = document.querySelector('.menu-icon');
 var menuIcons = document.querySelectorAll('.menu-btn');
 var headerBtn = document.querySelector('.header-right-btn');
+var headerLogo = document.querySelector('.header-left');
 var headerPattern = document.getElementById('header-pattern');
 var heroImg = document.querySelector('.main-hero-right');
+var pricingHero = document.getElementById('pricings-container');
+var aboutHero = document.getElementById('about-speech-container');
+var contactHero = document.getElementById('contact-container');
 menuIcons.forEach(function (menuIcon) {
   menuIcon.addEventListener('click', function () {
     if (menuIcon.dataset.id == 'open') {
@@ -136,13 +140,29 @@ menuIcons.forEach(function (menuIcon) {
         });
         headerBtn.classList.add('open');
       }, 300);
-      headerPattern.classList.add('open');
 
-      try {
-        if (heroImg) {
-          heroImg.classList.add('open');
-        }
-      } catch (_unused) {}
+      if (pricingHero) {
+        pricingHero.classList.add('open');
+      }
+
+      if (aboutHero) {
+        aboutHero.classList.add('open');
+      }
+
+      if (contactHero) {
+        contactHero.classList.add('open');
+      }
+
+      headerPattern.classList.add('open');
+      setTimeout(function () {
+        headerLogo.classList.add('open');
+
+        try {
+          if (heroImg) {
+            heroImg.classList.add('open');
+          }
+        } catch (_unused) {}
+      }, 300);
     } else {
       linksContainer.classList.remove('open');
       menuIconContainer.classList.remove('open');
@@ -151,6 +171,21 @@ menuIcons.forEach(function (menuIcon) {
       });
       headerBtn.classList.remove('open');
       headerPattern.classList.remove('open');
+      setTimeout(function () {
+        headerLogo.classList.remove('open');
+
+        if (pricingHero) {
+          pricingHero.classList.remove('open');
+        }
+
+        if (aboutHero) {
+          aboutHero.classList.remove('open');
+        }
+
+        if (contactHero) {
+          contactHero.classList.remove('open');
+        }
+      }, 300);
 
       try {
         if (heroImg) {

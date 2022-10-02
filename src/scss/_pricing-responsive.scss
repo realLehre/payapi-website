@@ -98,6 +98,12 @@
     @include c.flex(space-between, center, row);
     overflow-x: hidden;
 
+    &-left {
+      &.open {
+        z-index: 5;
+      }
+    }
+
     &-right {
       position: absolute;
       right: 0;
@@ -212,6 +218,9 @@
   }
 
   #pricings-container {
+    &.open {
+      z-index: 5;
+    }
     & .heading {
       font-size: map-get(c.$font-sizes, H3-big);
       margin-bottom: 40px;

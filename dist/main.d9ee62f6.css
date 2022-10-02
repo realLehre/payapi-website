@@ -67,16 +67,10 @@ body {
 .header-left {
   position: relative;
   width: 130px;
-  z-index: 4;
-}
-.header-left a {
-  position: relative;
-  z-index: 4;
+  z-index: 10;
 }
 .header-left img {
-  position: relative;
   width: 100%;
-  z-index: 4;
 }
 .header-right {
   position: relative;
@@ -677,6 +671,9 @@ footer {
     flex-direction: row;
     overflow-x: hidden;
   }
+  .header-left.open {
+    z-index: 5;
+  }
   .header-right {
     position: absolute;
     right: 0;
@@ -939,13 +936,13 @@ footer {
   }
 }
 @media (max-width: 450px) {
-  .header-right .right-container .pattern.top-pattern {
+  .header-right .pattern.top-pattern {
     width: 500px;
-    top: -15%;
-    right: 80%;
+    top: -10%;
+    right: 93%;
   }
-  .header-right .right-container .pattern.top-pattern.open {
-    transform: translateX(60%);
+  .header-right .pattern.top-pattern.open {
+    transform: translateX(70%);
   }
   #patners-container .patners-pattern {
     position: absolute;
@@ -1012,16 +1009,13 @@ footer {
     left: -250px;
     top: -580px;
   }
-  .patners-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 0px;
-    margin-bottom: 30px;
+  .header-right .pattern.top-pattern {
+    width: 500px;
+    top: -10%;
+    right: 70%;
   }
-  .patners-right img {
-    fill: white;
+  .header-right .pattern.top-pattern.open {
+    transform: translateX(53%);
   }
   .value-img {
     width: 90px;

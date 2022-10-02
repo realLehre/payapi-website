@@ -3,8 +3,12 @@ const links = document.querySelectorAll('.link');
 const menuIconContainer = document.querySelector('.menu-icon');
 const menuIcons = document.querySelectorAll('.menu-btn');
 const headerBtn = document.querySelector('.header-right-btn');
+const headerLogo = document.querySelector('.header-left');
 const headerPattern = document.getElementById('header-pattern');
 const heroImg = document.querySelector('.main-hero-right');
+const pricingHero = document.getElementById('pricings-container');
+const aboutHero = document.getElementById('about-speech-container');
+const contactHero = document.getElementById('contact-container');
 
 menuIcons.forEach((menuIcon) => {
   menuIcon.addEventListener('click', () => {
@@ -21,12 +25,26 @@ menuIcons.forEach((menuIcon) => {
         headerBtn.classList.add('open');
       }, 300);
 
+      if (pricingHero) {
+        pricingHero.classList.add('open');
+      }
+      if (aboutHero) {
+        aboutHero.classList.add('open');
+      }
+      if (contactHero) {
+        contactHero.classList.add('open');
+      }
+
       headerPattern.classList.add('open');
-      try {
-        if (heroImg) {
-          heroImg.classList.add('open');
-        }
-      } catch {}
+
+      setTimeout(() => {
+        headerLogo.classList.add('open');
+        try {
+          if (heroImg) {
+            heroImg.classList.add('open');
+          }
+        } catch {}
+      }, 300);
     } else {
       linksContainer.classList.remove('open');
 
@@ -39,6 +57,19 @@ menuIcons.forEach((menuIcon) => {
       headerBtn.classList.remove('open');
 
       headerPattern.classList.remove('open');
+
+      setTimeout(() => {
+        headerLogo.classList.remove('open');
+        if (pricingHero) {
+          pricingHero.classList.remove('open');
+        }
+        if (aboutHero) {
+          aboutHero.classList.remove('open');
+        }
+        if (contactHero) {
+          contactHero.classList.remove('open');
+        }
+      }, 300);
 
       try {
         if (heroImg) {
