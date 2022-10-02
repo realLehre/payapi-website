@@ -195,12 +195,14 @@ form.addEventListener('submit', function (e) {
 
   try {
     if (check && inputs[0].value != '' && inputs[1].value != '' && inputs[2].value != '' && textAreaValue != '') {
-      inputs.forEach(function (input) {
+      inputs.forEach(function (input, index) {
         input.value = '';
         input.style.borderBottom = '1px solid #6c8294';
+        labels[index].classList.remove('hide');
       });
       textArea.value = '';
       textArea.style.borderBottom = '1px solid #6c8294';
+      textArea.previousElementSibling.classList.remove('hide');
     }
   } catch (err) {}
 

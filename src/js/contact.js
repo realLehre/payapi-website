@@ -80,13 +80,15 @@ form.addEventListener('submit', (e) => {
       inputs[2].value != '' &&
       textAreaValue != ''
     ) {
-      inputs.forEach((input) => {
+      inputs.forEach((input, index) => {
         input.value = '';
         input.style.borderBottom = '1px solid #6c8294';
+        labels[index].classList.remove('hide');
       });
 
       textArea.value = '';
       textArea.style.borderBottom = '1px solid #6c8294';
+      textArea.previousElementSibling.classList.remove('hide');
     }
   } catch (err) {}
 
