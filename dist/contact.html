@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/contact.21f7e600.css">
     <script src="/shared.22f2d131.js" defer=""></script>
+    <script src="/contact.53e7da0c.js" defer=""></script>
     <title>Contact</title>
   <script src="/contact.21f7e600.js"></script></head>
   <body>
@@ -52,29 +53,34 @@
           <div class="contact-form-container">
             <form id="contact-form">
               <div class="form-group name">
-                <label for="name">Name</label>
-
-                <input type="text" id="name">
+                <label class="form-label" for="name">Name</label>
+                <input class="form-input" type="text" id="name">
+                <p class="error name-error">This field can't be empty</p>
               </div>
 
               <div class="form-group email">
-                <label for="email">Email Address</label>
-                <input id="email">
+                <label class="form-label" for="email">Email Address</label>
+                <input class="form-input" id="email">
+                <p class="error email-error">This field can't be empty</p>
+                <p class="error email-format-error">Enter a valid email</p>
               </div>
 
               <div class="form-group company">
-                <label for="company-name">Company Name</label>
-                <input type="text" id="company-name">
+                <label class="form-label" for="company-name">Company Name</label>
+                <input class="form-input" type="text" id="company-name">
+                <p class="error text-error">This field can't be empty</p>
               </div>
 
               <div class="form-group title">
-                <label for="title">Title</label>
-                <input type="text" id="title">
+                <label class="form-label" for="title">Title</label>
+                <input class="form-input" type="text" id="title">
+                <p class="error title-error">This field can't be empty</p>
               </div>
 
               <div class="form-group message">
-                <label for="message">Message</label>
+                <label class="form-label" for="message">Message</label>
                 <textarea name="" id="message" cols="30" rows="5"></textarea>
+                <p class="error message-error">This field can't be empty</p>
               </div>
 
               <div class="form-group checkbox-container">
