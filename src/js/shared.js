@@ -34,16 +34,14 @@ menuIcons.forEach((menuIcon) => {
       if (contactHero) {
         contactHero.classList.add('open');
       }
+      if (heroImg) {
+        heroImg.classList.add('open');
+      }
 
       headerPattern.classList.add('open');
 
       setTimeout(() => {
         headerLogo.classList.add('open');
-        try {
-          if (heroImg) {
-            heroImg.classList.add('open');
-          }
-        } catch {}
       }, 300);
     } else {
       linksContainer.classList.remove('open');
@@ -69,15 +67,18 @@ menuIcons.forEach((menuIcon) => {
         if (contactHero) {
           contactHero.classList.remove('open');
         }
+        if (heroImg) {
+          heroImg.classList.remove('open');
+        }
       }, 300);
 
-      try {
-        if (heroImg) {
-          setTimeout(() => {
-            heroImg.classList.remove('open');
-          }, 300);
-        }
-      } catch {}
+      // try {
+      //   if (heroImg) {
+      //     setTimeout(() => {
+      //       heroImg.classList.remove('open');
+      //     }, 300);
+      //   }
+      // } catch {}
     }
   });
 });

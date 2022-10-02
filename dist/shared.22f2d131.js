@@ -153,15 +153,13 @@ menuIcons.forEach(function (menuIcon) {
         contactHero.classList.add('open');
       }
 
+      if (heroImg) {
+        heroImg.classList.add('open');
+      }
+
       headerPattern.classList.add('open');
       setTimeout(function () {
         headerLogo.classList.add('open');
-
-        try {
-          if (heroImg) {
-            heroImg.classList.add('open');
-          }
-        } catch (_unused) {}
       }, 300);
     } else {
       linksContainer.classList.remove('open');
@@ -185,15 +183,17 @@ menuIcons.forEach(function (menuIcon) {
         if (contactHero) {
           contactHero.classList.remove('open');
         }
-      }, 300);
 
-      try {
         if (heroImg) {
-          setTimeout(function () {
-            heroImg.classList.remove('open');
-          }, 300);
+          heroImg.classList.remove('open');
         }
-      } catch (_unused2) {}
+      }, 300); // try {
+      //   if (heroImg) {
+      //     setTimeout(() => {
+      //       heroImg.classList.remove('open');
+      //     }, 300);
+      //   }
+      // } catch {}
     }
   });
 });
