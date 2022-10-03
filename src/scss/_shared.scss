@@ -3,6 +3,10 @@
 html {
   overflow-x: hidden;
   max-width: 100vw;
+
+  &.open {
+    overflow-y: hidden;
+  }
 }
 body {
   overflow-x: hidden;
@@ -63,6 +67,9 @@ body {
           font-weight: c.$sec-font-bold;
 
           &:hover {
+            color: c.$sec-mirage-blue;
+          }
+          &.active {
             color: c.$sec-mirage-blue;
           }
         }
@@ -148,17 +155,28 @@ body {
 }
 
 footer {
+  position: relative;
   margin-top: 70px;
-  background: rgb(0, 62, 0);
+  background: c.$sec-mirage-blue;
   padding: 20px 0;
   width: 100%;
+  overflow: hidden;
+
+  & .footer-bg {
+    position: absolute;
+    right: -20%;
+    top: -50%;
+    z-index: 3;
+  }
 }
 
 .footer {
+  position: relative;
   width: 90%;
   max-width: 1400px;
   margin-inline: auto;
   @include c.flex(space-between, center, row);
+  z-index: 4;
 }
 
 .footer-left {
@@ -180,12 +198,17 @@ footer {
       }
 
       & a {
-        color: c.$sec-light-san-juan-blue;
+        color: c.$pri-link-water-white;
         font-size: 15px;
         font-weight: c.$sec-font-bold;
+        opacity: 0.7;
 
         &:hover {
-          color: c.$sec-mirage-blue;
+          opacity: 1;
+        }
+
+        &.factive {
+          opacity: 1;
         }
       }
     }

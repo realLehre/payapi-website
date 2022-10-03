@@ -124,6 +124,19 @@
             &:hover {
               color: c.$pri-link-water-white;
             }
+
+            &.active {
+              color: c.$pri-link-water-white;
+              &:after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: c.$pri-link-water-white;
+              }
+            }
           }
         }
       }
@@ -242,6 +255,13 @@
     }
   }
 
+  footer {
+    & .footer-bg {
+      right: -16%;
+      top: 30%;
+    }
+  }
+
   .footer {
     @include c.flex(center, center, column);
   }
@@ -325,6 +345,13 @@
       }
     }
   }
+
+  footer {
+    & .footer-bg {
+      right: -45%;
+      top: 43%;
+    }
+  }
 }
 
 @media (max-width: 394px) {
@@ -339,6 +366,13 @@
           transform: translateX(45%);
         }
       }
+    }
+  }
+
+  footer {
+    & .footer-bg {
+      right: -48%;
+      top: 45%;
     }
   }
 }
@@ -357,6 +391,13 @@
       }
     }
   }
+
+  footer {
+    & .footer-bg {
+      right: -53%;
+      top: 45%;
+    }
+  }
 }
 
 @media (max-width: 360px) {
@@ -371,6 +412,13 @@
           transform: translateX(45%);
         }
       }
+    }
+  }
+
+  footer {
+    & .footer-bg {
+      right: -56%;
+      top: 45%;
     }
   }
 }

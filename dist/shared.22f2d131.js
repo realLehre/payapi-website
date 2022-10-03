@@ -132,6 +132,7 @@ var contactHero = document.getElementById('contact-container');
 menuIcons.forEach(function (menuIcon) {
   menuIcon.addEventListener('click', function () {
     if (menuIcon.dataset.id == 'open') {
+      document.documentElement.classList.add('open');
       linksContainer.classList.add('open');
       menuIconContainer.classList.add('open');
       setTimeout(function () {
@@ -162,6 +163,7 @@ menuIcons.forEach(function (menuIcon) {
         headerLogo.classList.add('open');
       }, 300);
     } else {
+      document.documentElement.classList.remove('open');
       linksContainer.classList.remove('open');
       menuIconContainer.classList.remove('open');
       links.forEach(function (linkItem) {

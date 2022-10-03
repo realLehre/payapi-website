@@ -13,6 +13,8 @@ const contactHero = document.getElementById('contact-container');
 menuIcons.forEach((menuIcon) => {
   menuIcon.addEventListener('click', () => {
     if (menuIcon.dataset.id == 'open') {
+      document.documentElement.classList.add('open');
+
       linksContainer.classList.add('open');
 
       menuIconContainer.classList.add('open');
@@ -44,6 +46,8 @@ menuIcons.forEach((menuIcon) => {
         headerLogo.classList.add('open');
       }, 300);
     } else {
+      document.documentElement.classList.remove('open');
+
       linksContainer.classList.remove('open');
 
       menuIconContainer.classList.remove('open');
