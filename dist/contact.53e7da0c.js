@@ -181,20 +181,28 @@ form.addEventListener('submit', function (e) {
 
     if (input.value == '') {
       errorMessage.classList.add('showError');
+      labels[index].style.color = '#ff0000';
+      input.style.borderBottom = '1px solid #ff0000';
     } else {
       errorMessage.classList.remove('showError');
+      labels[index].style.color = '#6c8294';
+      input.style.borderBottom = '1px solid #6c8294';
       validateEmail();
     }
   });
 
-  if (textAreaValue == '') {
+  if (textArea.value == '') {
     textErrorMessage.classList.add('showError');
+    textArea.style.borderBottom = '1px solid #ff0000';
+    textArea.previousElementSibling.style.color = '#ff0000';
   } else {
     textErrorMessage.classList.remove('showError');
+    textArea.style.borderBottom = '1px solid #6c8294';
+    textArea.previousElementSibling.style.color = '#6c8294';
   }
 
   try {
-    if (check && inputs[0].value != '' && inputs[1].value != '' && inputs[2].value != '' && textAreaValue != '') {
+    if (check && inputs[0].value != '' && inputs[1].value != '' && inputs[2].value != '' && textArea.value != '') {
       inputs.forEach(function (input, index) {
         input.value = '';
         input.style.borderBottom = '1px solid #6c8294';
@@ -203,10 +211,11 @@ form.addEventListener('submit', function (e) {
       textArea.value = '';
       textArea.style.borderBottom = '1px solid #6c8294';
       textArea.previousElementSibling.classList.remove('hide');
+      document.querySelector('#checkbox').classList.add('remove');
+    } else {
+      e.preventDefault();
     }
   } catch (err) {}
-
-  e.preventDefault();
 });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];

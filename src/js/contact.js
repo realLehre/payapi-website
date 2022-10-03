@@ -60,16 +60,24 @@ form.addEventListener('submit', (e) => {
     const errorMessage = input.nextElementSibling;
     if (input.value == '') {
       errorMessage.classList.add('showError');
+      labels[index].style.color = '#ff0000';
+      input.style.borderBottom = '1px solid #ff0000';
     } else {
       errorMessage.classList.remove('showError');
+      labels[index].style.color = '#6c8294';
+      input.style.borderBottom = '1px solid #6c8294';
       validateEmail();
     }
   });
 
-  if (textAreaValue == '') {
+  if (textArea.value == '') {
     textErrorMessage.classList.add('showError');
+    textArea.style.borderBottom = '1px solid #ff0000';
+    textArea.previousElementSibling.style.color = '#ff0000';
   } else {
     textErrorMessage.classList.remove('showError');
+    textArea.style.borderBottom = '1px solid #6c8294';
+    textArea.previousElementSibling.style.color = '#6c8294';
   }
 
   try {
@@ -78,7 +86,7 @@ form.addEventListener('submit', (e) => {
       inputs[0].value != '' &&
       inputs[1].value != '' &&
       inputs[2].value != '' &&
-      textAreaValue != ''
+      textArea.value != ''
     ) {
       inputs.forEach((input, index) => {
         input.value = '';
@@ -89,8 +97,10 @@ form.addEventListener('submit', (e) => {
       textArea.value = '';
       textArea.style.borderBottom = '1px solid #6c8294';
       textArea.previousElementSibling.classList.remove('hide');
+
+      document.querySelector('#checkbox').classList.add('remove');
+    } else {
+      e.preventDefault();
     }
   } catch (err) {}
-
-  e.preventDefault();
 });

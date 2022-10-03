@@ -88,6 +88,16 @@
                 display: block;
               }
             }
+
+            &.remove {
+              &:checked ~ .check-marker {
+                background: #979797;
+
+                &:after {
+                  display: none;
+                }
+              }
+            }
           }
 
           & .check-marker {

@@ -346,6 +346,12 @@ footer {
 .contact-form-container form .form-group.checkbox-container .checkbox-main input:checked ~ .check-marker:after {
   display: block;
 }
+.contact-form-container form .form-group.checkbox-container .checkbox-main input.remove:checked ~ .check-marker {
+  background: #979797;
+}
+.contact-form-container form .form-group.checkbox-container .checkbox-main input.remove:checked ~ .check-marker:after {
+  display: none;
+}
 .contact-form-container form .form-group.checkbox-container .checkbox-main .check-marker {
   position: absolute;
   top: 0;
